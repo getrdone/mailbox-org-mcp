@@ -1,0 +1,65 @@
+{
+  "name": "mailbox-org-mcp",
+  "version": "1.0.0",
+  "description": "Unofficial MCP server for mailbox.org: Gmail-style mail search and sorting, filters, unsubscribe, aliases with expiry reminders, PGP, contacts, tasks, calendar and Drive",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "mailbox-org-mcp": "dist/index.js",
+    "mailbox-org-mcp-cli": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "check": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "doctor": "node dist/cli.js doctor",
+    "test": "node scripts/test.mjs"
+  },
+  "engines": {
+    "node": ">=20.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "fast-xml-parser": "^5.12.1",
+    "imapflow": "^2.12.2",
+    "mailparser": "^3.15.0",
+    "nodemailer": "^10.6.1",
+    "openpgp": "^6.3.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "^26.6.7",
+    "@types/nodemailer": "^8.0.2",
+    "typescript": "^7.0.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getrdone/mailbox-org-mcp.git"
+  },
+  "homepage": "https://github.com/getrdone/mailbox-org-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/getrdone/mailbox-org-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mailbox.org",
+    "email",
+    "imap",
+    "sieve",
+    "caldav",
+    "carddav",
+    "pgp",
+    "claude"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ]
+}
